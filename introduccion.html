@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción - San Antonio Texas</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body {
+            background: url('fondo2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px #000;
+        }
+        .contenido {
+            background: rgba(0,0,0,0.75);
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 820px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background-color: #2F4F4F;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover { background-color: #3E6363; }
+    </style>
+</head>
+<body>
+    <button id="botonMusica">▶️ Reproducir</button>
+
+<audio id="musica.mp3" src="musica.mp3"></audio>
+
+<script>
+    const boton = document.getElementById('botonMusica');
+    const audio = document.getElementById('musica.mp3');
+
+    boton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            boton.textContent = "⏸️ Pausar";
+        } else {
+            audio.pause();
+            boton.textContent = "▶️ Reproducir";
+        }
+    });
+</script>
+
+    <h1>INTRODUCCIÓN</h1>
+
+    <div class="contenido">
+        En el centro del estado de Veracruz, perteneciente al municipio de Cosamaloapan, *San Antonio Texas* destaca por su gran riqueza en tradiciones, naturaleza bien conservada y la calidez de su gente, reconocida por ser muy hospitalaria y trabajadora. Su nombre singular ya llama la atención de quienes lo escuchan por primera vez, pero lo que más impresiona es todo lo que ofrece: extensos paisajes verdes, clima agradable y un entorno tranquilo que invita a disfrutar.
+        <br><br>
+        Cuenta con una historia que se ha transmitido de generación en generación, además de expresiones culturales vivas que se aprecian en sus fiestas, danzas y costumbres locales. También conserva rincones históricos y espacios públicos que son el corazón de la vida comunitaria.
+        <br><br>
+        En cuanto a su gastronomía, se distingue por sabores auténticos elaborados con productos frescos de la región: maíz, caña, frutas y verduras que crecen en sus tierras fértiles. Sus áreas naturales son ideales tanto para descansar y respirar aire puro, como para realizar caminatas y actividades al aire libre en contacto con el entorno.
+        <br><br>
+        Es un lugar perfecto para conocer el patrimonio rural de Veracruz, convivir con sus habitantes y alejarse del ritmo acelerado de las ciudades grandes, recuperando la paz y la sencillez que caracterizan a estas tierras del sur‑centro del estado.
+    </div>
+
+    <button onclick="location.href='index.html'">⬅️ Regresar al Inicio</button>
+</body>
+</html>
+ 

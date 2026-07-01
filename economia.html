@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economía - San Antonio Texas</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+        body {
+            background: url('fondo5.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px #000;
+        }
+        .contenido {
+            background: rgba(0,0,0,0.75);
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 850px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        .foto-seccion {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 10px;
+            border: 3px solid #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            display: block;
+        }
+        /* Estilo para la tabla */
+        table {
+            width: 100%;
+            margin: 25px 0;
+            border-collapse: collapse;
+            background-color: rgba(255,255,255,0.9);
+            color: #222;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #8B4513;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        tr:hover {
+            background-color: rgba(139, 69, 19, 0.1);
+        }
+        button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background-color: #2F4F4F;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover { background-color: #3E6363; }
+    </style>
+</head>
+<body>
+
+     <button id="botonMusica">▶️ Reproducir</button>
+
+<audio id="musica.mp3" src="musica.mp3"></audio>
+
+<script>
+    const boton = document.getElementById('botonMusica');
+    const audio = document.getElementById('musica.mp3');
+
+    boton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            boton.textContent = "⏸️ Pausar";
+        } else {
+            audio.pause();
+            boton.textContent = "▶️ Reproducir";
+        }
+    });
+</script>
+
+    <h1>ECONOMÍA</h1>
+
+    <div class="contenido">
+        <p><strong>San Antonio Texas, Veracruz 🇲🇽</strong></p>
+        <br>
+        <p>Es una localidad perteneciente al municipio de Cosamaloapan, en la región centro‑sur del estado de Veracruz, con una población aproximada de <strong>1,401 habitantes</strong>. Su economía se clasifica como frágil a medianamente estable, ya que depende mayormente de las condiciones climáticas y de los ciclos de cosecha, aunque mantiene una actividad constante que permite el sustento de sus familias.</p>
+        <br>
+
+        
+        <img src="econ.jpg" alt="Actividades económicas de la localidad" class="foto-seccion">
+        <br>
+
+        <p><strong>Principales actividades y características económicas:</strong></p>
+
+        
+        <table>
+            <tr>
+                <th>Actividad</th>
+                <th>Detalles e importancia</th>
+            </tr>
+            <tr>
+                <td><strong>Agricultura</strong></td>
+                <td>Es la actividad principal. El cultivo de caña de azúcar representa la mayor fuente de empleo e ingreso; su producción se envía a ingenios de la zona. También se cultivan arroz, maíz, frijol, naranja, plátano, mango y papaya, para consumo local y venta en mercados regionales.</td>
+
+            </tr>
+            <tr>
+                <td><strong>Ganadería</strong></td>
+                <td>Se desarrolla en escala familiar: ganado vacuno para carne y leche, además de ganado porcino y aves. Complementa los ingresos y provee alimentos frescos a los hogares.</td>
+            </tr>
+            <tr>
+                <td><strong>Comercio y servicios</strong></td>
+                <td>Pequeñas tiendas de abarrotes, talleres de reparación y servicios básicos cubren las necesidades de la comunidad. También hay actividades de transporte y comercialización de productos agrícolas.</td>
+            </tr>
+            <tr>
+                <td><strong>Características generales</strong></td>
+                <td>Economía basada en recursos naturales, con poca industrialización. Su estabilidad depende de las cosechas y precios de los productos en el mercado.</td>
+            </tr>
+        </table>
+
+        <p>Esta estructura productiva mantiene la identidad rural del lugar y es el motor que impulsa el desarrollo diario de San Antonio Texas.</p>
+    </div>
+
+    <button onclick="location.href='index.html'">⬅️ Regresar al Inicio</button>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Diego Caleb - El Arte de los Motores</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body {
+            background: url('fondo4.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .logo-taller {
+            width: 220px;
+            margin: 20px auto;
+            border-radius: 50%;
+            border: 4px solid #FFD700;
+            box-shadow: 0 0 12px rgba(0,0,0,0.7);
+        }
+        h1 {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin: 20px 0;
+            color: #FFD700;
+            text-shadow: 2px 2px 6px #000;
+        }
+        h2 {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 1.8rem;
+            color: #FFD700;
+            margin: 35px 0 15px 0;
+            border-bottom: 2px solid rgba(255,215,0,0.6);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .contenido {
+            background: rgba(0,0,0,0.78);
+            padding: 30px;
+            border-radius: 14px;
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        .foto-seccion {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 10px;
+            border: 3px solid #FFD700;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            display: block;
+        }
+        .contacto-info {
+            background: rgba(255,215,0,0.15);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .correo {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #FFD700;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .correo:hover {
+            background-color: #FFC107;
+            transform: scale(1.03);
+        }
+        button {
+            margin-top: 30px;
+            padding: 13px 28px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background-color: #2F4F4F;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #3E6363;
+        }
+        ul {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+   <button id="botonMusica">▶️ Reproducir</button>
+
+<audio id="musica" src="musica.mp3"></audio>
+
+<script>
+    const boton = document.getElementById('botonMusica');
+    const audio = document.getElementById('musica.mp3');
+
+    boton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            boton.textContent = "⏸️ Pausar";
+        } else {
+            audio.pause();
+            boton.textContent = "▶️ Reproducir";
+        }
+    });
+</script>
+  
+
+    
+    <img src="logo.png" alt="Logo Taller Diego Caleb" class="logo-taller">
+
+    <h1>TALLER DIEGO CALEB<br><em>El Arte de los Motores</em></h1>
+
+    <div class="contenido">
+
+      
+        <h2>Servicio</h2>
+        <p>Ofrecemos mantenimiento, reparación y optimización de autos, motocicletas y camionetas ligeras. Realizamos revisiones preventivas, reparaciones completas de motores, sistemas eléctricos, frenos, suspensión y ajustes para mejorar el rendimiento de cada vehículo.</p>
+
+        <img src="fototaller.jpg" alt="Servicios de reparación y mantenimiento" class="foto-seccion">
+
+
+       
+        <h2>Marca y Posicionamiento</h2>
+        <p><strong>Ventaja competitiva:</strong> Contamos con experiencia especializada, trato personalizado, tecnología moderna, precios transparentes y tiempos de trabajo comprometidos.</p>
+        <p><strong>Valores:</strong> Calidad, Honestidad y Pasión por lo que hacemos.</p>
+        <p><strong>Percepción deseada:</strong> Ser reconocidos como un servicio confiable, especializado y apasionado por el cuidado de los vehículos.</p>
+        <p><strong>Mensaje:</strong> Profesionalismo y dedicación al detalle, conectando con el verdadero "arte de los motores".</p>
+
+
+      
+        <h2>Público Meta</h2>
+        <p>Nuestro servicio está dirigido a:</p>
+        <ul>
+            <li>Personas de 25 a 65 años de Tierra Blanca, Novara, Tres Valles, Playa Margarita y municipios cercanos.</li>
+            <li>Dueños de vehículos particulares que buscan un servicio confiable y seguro.</li>
+            <li>Pequeñas empresas que cuenten con flotas de vehículos de trabajo.</li>
+        </ul>
+
+
+        <h2>Competencia</h2>
+        <p>En la zona contamos con referencias locales como: Taller de Medina (Gabino Barrera), El Taller del Güero en Novara y el taller mecánico "Los Migueles". Nos diferenciamos por la atención personalizada y la calidad garantizada en cada reparación.</p>
+
+
+       
+        <h2>Presupuesto</h2>
+        <p>El costo aproximado por servicios generales de mantenimiento y reparación básica es de <strong>$2,000 MXN</strong>, pudiendo variar según el tipo de trabajo, refacciones y tiempo requerido.</p>
+
+
+     
+        <h2>Visión a Largo Plazo</h2>
+        <p><strong>A 5 años:</strong> Ser la referencia principal en San Antonio Texas y zonas aledañas de Veracruz; abrir una sucursal adicional, ofrecer servicio a domicilio y contar con certificaciones oficiales de marcas.</p>
+        <p><strong>A 10 años:</strong> Lograr expansión regional en todo Veracruz, contar con un centro de capacitación técnica, ofrecer servicios de optimización con tecnología de vanguardia y tener nuestra propia tienda de refacciones.</p>
+
+
+       
+        <h2>Contacto y Horario</h2>
+        <div class="contacto-info">
+            <p><strong>📍 Dirección:</strong> San Antonio Texas, Veracruz. Calle 16 de Septiembre</p>
+            <p><strong>📞 Teléfono:</strong> +52 288 885 5119</p>
+            <p><strong>✉️ Correo electrónico:</strong><br>
+                <a href="mailto:hernandezantoscaleb0@gmail.com" class="correo">hernandezantoscaleb0@gmail.com</a>
+            </p>
+            <p><strong>⏰ Horario de atención:</strong><br>
+                Lunes a Viernes de 7:00 AM a 8:00 PM
+            </p>
+        </div>
+
+    </div>
+
+    <button onclick="location.href='index.html'">⬅️ Regresar al Inicio</button>
+
+</body>
+</html>

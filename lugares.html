@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugares de Interés - San Antonio Texas</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body {
+            background: url('fondo3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px #000;
+        }
+        .contenido {
+            background: rgba(0,0,0,0.75);
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 850px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            text-align: left;
+        }
+        .lugar {
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+        .foto-lugar {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            margin: 15px auto;
+            display: block;
+            border-radius: 10px;
+            border: 3px solid #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background-color: #2F4F4F;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover { background-color: #3E6363; }
+    </style>
+</head>
+<body>
+
+    <button id="botonMusica">▶️ Reproducir</button>
+
+<audio id="musica.mp3" src="musica.mp3"></audio>
+
+<script>
+    const boton = document.getElementById('botonMusica');
+    const audio = document.getElementById('musica.mp3');
+
+    boton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            boton.textContent = "⏸️ Pausar";
+        } else {
+            audio.pause();
+            boton.textContent = "▶️ Reproducir";
+        }
+    });
+</script>
+
+    <h1>LUGARES DE INTERÉS</h1>
+
+    <div class="contenido">
+
+       
+        <div class="lugar">
+            <h3>🌳 Parque Principal</h3>
+            <img src="parque.jpg" alt="Parque principal de San Antonio Texas" class="foto-lugar">
+            <p>Es uno de los espacios más frecuentados y animados de la localidad. Por las tardes y fines de semana se convierte en punto de reunión: familias, jóvenes y niños salen a pasear, descansar y practicar juegos sencillos. Cuenta con áreas verdes, bancas y buena sombra. Aquí es muy común ver partidos de voleibol organizados por los propios habitantes, lo que fortalece la convivencia entre vecinos y mantiene viva la costumbre de compartir al aire libre.</p>
+        </div>
+
+        <div class="lugar">
+            <h3>⚽ Campo Deportivo</h3>
+            <img src="campo.jpg" alt="Campo deportivo de la comunidad" class="foto-lugar">
+            <p>Es el recinto más grande para actividades físicas y eventos colectivos. Principalmente lo utilizan alumnos y maestros de la escuela secundaria y del bachillerato para sus clases de educación física y entrenamientos. También es el lugar favorito para jugar fútbol y béisbol; incluso asisten equipos de poblaciones cercanas como Los Naranjos y Tres Valles para realizar encuentros amistosos y torneos. Además, es el espacio elegido para grandes celebraciones: jaripeos tradicionales, fiestas patronales, reuniones populares y festejos de cumpleaños para grupos grandes.</p>
+        </div>
+
+        <div class="lugar">
+            <h3>⛪ Iglesia de la Comunidad</h3>
+            <img src="iglesia.jpg" alt="Iglesia de San Antonio Texas" class="foto-lugar">
+            <p>Constituye el centro espiritual y también histórico de San Antonio Texas. Su construcción conserva rasgos sencillos pero sólidos, típicos de las iglesias rurales de la región. Aquí se celebran misas diarias y dominicales, así como las principales fiestas religiosas del año, procesiones y actos especiales que reúnen a casi toda la población. Es el lugar donde se conservan y transmiten las creencias y tradiciones religiosas que forman parte de la identidad de este pueblo.</p>
+        </div>
+
+       
+        <div class="lugar">
+            <h3>🌿 Zonas Naturales y Caminos</h3>
+            
+            <p>Alrededor de la localidad se encuentran senderos y zonas de cultivo que también son recorridos por visitantes y locales; ofrecen vistas amplias del paisaje agrícola y permiten apreciar la vegetación, el clima y la forma de vida ligada a la tierra. Son ideales para caminatas tranquilas y disfrutar del aire libre.</p>
+        </div>
+
+    </div>
+
+    <button onclick="location.href='index.html'">⬅️ Regresar al Inicio</button>
+
+</body>
+</html>

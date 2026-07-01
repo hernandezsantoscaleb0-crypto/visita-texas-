@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Antonio Texas - Veracruz</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body {
+            background: url('fondo1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin: 20px 0;
+            text-shadow: 2px 2px 5px #000;
+        }
+        .contador {
+            background: rgba(0,0,0,0.7);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-size: 1.2rem;
+        }
+        .video {
+            width: 95%;
+            max-width: 850px;
+            height: auto;
+            margin: 20px auto;
+            border: 3px solid #ffffff;
+            border-radius: 10px;
+            background-color: #000000;
+            display: block;
+        }
+        .botones {
+            margin: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background-color: #8B4513;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #A0522D;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+   <button id="botonMusica">▶️ Reproducir</button>
+
+<audio id="musica.mp3" src="musica.mp3"></audio>
+
+<script>
+    const boton = document.getElementById('botonMusica');
+    const audio = document.getElementById('musica.mp3');
+
+    boton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            boton.textContent = "⏸️ Pausar";
+        } else {
+            audio.pause();
+            boton.textContent = "▶️ Reproducir";
+        }
+    });
+</script>
+    <h1>San Antonio Texas, Veracruz MX</h1>
+
+    <div class="contador">
+        Visitas: <span id="contador">0</span>
+    </div>
+
+    <video class="video-presentacion.mp4" controls preload="metadata">
+        <source src="video-presentacion.mp4" type="video/mp4">
+    
+    </video>
+
+    <div class="botones">
+        <button onclick="location.href='introduccion.html'">INTRODUCCIÓN</button>
+        <button onclick="location.href='lugares.html'">LUGARES DE INTERÉS</button>
+        <button onclick="location.href='economia.html'">ECONOMÍA</button>
+        <button onclick="location.href='taller.html'">TALLER</button>
+    </div>
+
+   
+    <script>
+        if (localStorage.getItem('visitas')) {
+            let visitas = parseInt(localStorage.getItem('visitas')) + 1;
+            localStorage.setItem('visitas', visitas);
+            document.getElementById('contador').textContent = visitas;
+        } else {
+            localStorage.setItem('visitas', 1);
+            document.getElementById('contador').textContent = 1;
+        }
+    </script>
+
+</body>
+</html>
